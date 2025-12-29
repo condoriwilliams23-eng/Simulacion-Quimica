@@ -1,0 +1,1698 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Simulador precipitado y filtracion</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3ma0psscfgml8</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="video" version="1">Video</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>800</width>
+        <height>600</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="imagenInicio" sid="266685383139686">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="460886236545326" speed="5">
+                    <frame duration="1" hotspotX="0.505" hotspotY="0.5" original-source="C:\PID\quimica\Simulador Densidad\Imagenes\Presentacion.png">
+                        <collision-poly>
+                            <point x="0.00127796" y="0.00172861" />
+                            <point x="0.998722" y="0.0138289" />
+                            <point x="0.998722" y="0.986171" />
+                            <point x="0.00127796" y="0.998271" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="imagenIndice" sid="255732018796267">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="769030881716033" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\PID\quimica\Simulador Densidad\Imagenes\Indice.png">
+                        <collision-poly>
+                            <point x="0.0296457" y="0.0377532" />
+                            <point x="0.499638" y="0.500921" />
+                            <point x="0.606652" y="0.500921" />
+                            <point x="1" y="1" />
+                            <point x="0.499638" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fondoGrisHUD" sid="660035236488319">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="555197411260433">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811796455167153" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\pid qUIMICA\Imagenes .png\fondo gris.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fondoCompuestos" sid="659789896468076">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="291168436954041" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="compuestos" sid="190302488970326">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="miniBarra" sid="347935915387659">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="212495735501424" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lineaHorizontal" sid="422194503938775">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="454411442729338" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="textoMateriales2" sid="687041311566148">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="fondoMateriales" sid="252906274433646">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="164367765210695" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="menu" sid="471441075162283">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="960989482894850" speed="5">
+                    <frame duration="1" hotspotX="0.503759" hotspotY="0.484076" original-source="C:\logoutn\utn.png">
+                        <collision-poly>
+                            <point x="0.0300752" y="0.0509554" />
+                            <point x="0.5" y="0.00636943" />
+                            <point x="0.969925" y="0.0509554" />
+                            <point x="0.996241" y="0.496815" />
+                            <point x="0.969925" y="0.949045" />
+                            <point x="0.5" y="0.993631" />
+                            <point x="0.0300752" y="0.949045" />
+                            <point x="0.0037594" y="0.496815" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lineaMateriales" sid="529552757159170">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="589721494824891" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="antiBarraMateriales" sid="236318702495024">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="165137179003544" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="antiBarraCompuestos" sid="665348163195210">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="378591210335297" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="barraCompuestos" sid="439566101495150">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="114290280659111" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lineaHUD" sid="668176137739134">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="805626673292441" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="QuimicaGeneralFRSF" sid="351917398289111">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="textoTP" sid="909489632826022">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="fondoSimulador" sid="483616656049936">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="688120218782532" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="grid" sid="463657311480896">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="580691998318572" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.523478" original-source="C:\PID\quimica\nuevosSprites\Printable-graph-paper-HD-scaled.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="balanzaSimulacion" sid="857713851590457">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="677812914573776">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="224044690193609" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\PID\quimica\otrasimagenes\Balanza.jpg">
+                        <image-point name="Imagepoint 1" x="0.554688" y="0.68" />
+                        <image-point name="Imagepoint 2" x="0.132813" y="0.54" />
+                        <image-point name="Imagepoint 3" x="0.390625" y="0.5" />
+                        <image-point name="Imagepoint 4" x="0.492188" y="0.08" />
+                        <collision-poly>
+                            <point x="0.191693" y="0.029703" />
+                            <point x="0.498403" y="0.00990099" />
+                            <point x="0.808307" y="0.019802" />
+                            <point x="0.99361" y="0.207921" />
+                            <point x="0.996805" y="0.990099" />
+                            <point x="0.00319489" y="0.980198" />
+                            <point x="0.00638978" y="0.207921" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="ConPapel" pingpong="0" repeatcount="1" repeatto="0" sid="880546787272107" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.554688" y="0.66" />
+                        <image-point name="Imagepoint 2" x="0.132813" y="0.54" />
+                        <image-point name="Imagepoint 3" x="0.390625" y="0.5" />
+                        <image-point name="Imagepoint 4" x="0.492188" y="0.08" />
+                        <collision-poly>
+                            <point x="0.191693" y="0.029703" />
+                            <point x="0.498403" y="0.00990099" />
+                            <point x="0.808307" y="0.019802" />
+                            <point x="0.99361" y="0.207921" />
+                            <point x="0.996805" y="0.990099" />
+                            <point x="0.00319489" y="0.980198" />
+                            <point x="0.00638978" y="0.207921" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="ConPapel2" pingpong="0" repeatcount="1" repeatto="0" sid="547692931661585" speed="5">
+                    <frame duration="1" hotspotX="0.507813" hotspotY="1" original-source="C:\Users\tomya\Downloads\Balanza + papel y sal.jpg">
+                        <image-point name="Imagepoint 1" x="0.546875" y="0.7" />
+                        <image-point name="Imagepoint 2" x="0.125" y="0.6" />
+                        <image-point name="Imagepoint 3" x="0.367188" y="0.566667" />
+                        <image-point name="Imagepoint 4" x="0.4375" y="0.166667" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="923611669534364">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="cuadroDialogo" sid="759450004688366">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="311222128761087" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tomya\Desktop\Sin título.png">
+                        <image-point name="Imagepoint 1" x="0.113333" y="0.135" />
+                        <image-point name="Imagepoint 2" x="0.496667" y="0.925" />
+                        <image-point name="Imagepoint 3" x="0.0483333" y="0.1075" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txtIntroduccion" sid="308447811508504">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="barraMenu" sid="598369181115659">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="escondido" sid="499220424977162" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="240034513467634" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txtProcedimiento" sid="480378438101417">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txtCalculos" sid="309492877189577">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txtAcercaDe" sid="638311590150398">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Mouse" sid="154427545685545">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Function" sid="765425452043115">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="textoCuadroIntroduccion" sid="537393102225877">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txtCerrar" sid="944403147249146">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="cerrar" sid="465454475930128">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="699505407898720" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="textoProcedimientoCompleto" sid="256977946447520">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="paredTextos" sid="241699759223893">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="746972142784847" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="volver" sid="911095858035030">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="628670478765382" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="volverFalso" sid="377645284950474">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="440555557271346" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="paredFalsa" sid="284671946383481">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="788535282882391" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lavar" sid="823385900252715">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184894817313013" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tomya\Downloads\lavar.png">
+                        <collision-poly>
+                            <point x="0.145263" y="0.14557" />
+                            <point x="0.498947" y="0" />
+                            <point x="0.854737" y="0.14557" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854737" y="0.85443" />
+                            <point x="0.498947" y="1" />
+                            <point x="0.145263" y="0.85443" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fondoTabla" sid="293673579069947">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759469527274095" speed="5">
+                    <frame duration="1" hotspotX="0.501176" hotspotY="0.5" original-source="C:\Users\tomya\Desktop\Tabla.png">
+                        <collision-poly>
+                            <point x="0.0075" y="0.00808625" />
+                            <point x="0.9925" y="0.00808625" />
+                            <point x="0.995" y="0.994609" />
+                            <point x="0.0025" y="0.997305" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="textoMasa" sid="785049005855674">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="textoTemperatura" sid="548349397950946">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="textoDensidad" sid="155007274493731">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="guardar" sid="947025306672353">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869254064726057" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tomya\Downloads\guardar.png">
+                        <collision-poly>
+                            <point x="0.145263" y="0.14557" />
+                            <point x="0.498947" y="0" />
+                            <point x="0.854737" y="0.14557" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854737" y="0.85443" />
+                            <point x="0.498947" y="1" />
+                            <point x="0.145263" y="0.85443" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lineaMateriales2" sid="819169078293787">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="994210489575409" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lineaMaterialesDesaparece" sid="756361105439782">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="613187732939400" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="textoCuadroCalculos" sid="803954601487602">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="acercaDe" sid="835412176946433">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="915812830406984" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500444" original-source="C:\PID\quimica\Simulador Densidad\Imagenes\Creditos\creditos.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Balanza" sid="819396532278969">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="pesoMedido" sid="161026553703562" type="number" />
+                <instance-variable name="cantidad" sid="188374882203596" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="133326755247830" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\balanza 7.png">
+                        <collision-poly>
+                            <point x="0.121005" y="0.066313" />
+                            <point x="0.5" y="0.00795756" />
+                            <point x="0.842466" y="0.108753" />
+                            <point x="0.952055" y="0.506631" />
+                            <point x="0.915525" y="0.98939" />
+                            <point x="0.0890411" y="0.984085" />
+                            <point x="0.0410959" y="0.506631" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fondoCompuestos2" sid="713423630540414">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="815035402213786" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fondoTercero" sid="854368294264513">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="299210010223973" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="294301330792761">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="fondoEquipos" sid="964090755854675">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="971971005569657" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="textoMateriales3" sid="537284978505697">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="BarraEquipamiento" sid="628440889258758">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869249570672571" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="antiBarraEquipos" sid="247888730126724">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892133604745120" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="535384263044656">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296582734522719" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="vaso250Barra" sid="218509409915974">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="126540388245577" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Vaso de precipitados 250 ml.png">
+                        <collision-poly>
+                            <point x="0.00628931" y="0.0847458" />
+                            <point x="0.481132" y="0.00726392" />
+                            <point x="0.987421" y="0.0605327" />
+                            <point x="0.933962" y="0.554479" />
+                            <point x="0.855346" y="0.949153" />
+                            <point x="0.481132" y="0.992736" />
+                            <point x="0.147799" y="0.917676" />
+                            <point x="0.116352" y="0.554479" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ErlenmeyerBarra" sid="155666748739149">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="686006126063821" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Ernlenmeyer.png">
+                        <collision-poly>
+                            <point x="0.232" y="0.380313" />
+                            <point x="0.492" y="0.00447427" />
+                            <point x="0.76" y="0.375839" />
+                            <point x="0.936" y="0.774049" />
+                            <point x="0.492" y="0.991051" />
+                            <point x="0.068" y="0.762864" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="VolpipetaBarra" sid="491486745315831">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="332133373069109" speed="5">
+                    <frame duration="1" hotspotX="0.6" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Volpipeta.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PipetaBarra" sid="198116188606814">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726860313967725" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Pipeta 1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PropipetaBarra" sid="934911720077241">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="752501814129469" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Propipeta 2.png">
+                        <collision-poly>
+                            <point x="0.00399734" y="0.0606061" />
+                            <point x="0.542971" y="0.130579" />
+                            <point x="0.654231" y="0.414325" />
+                            <point x="0.736842" y="0.505785" />
+                            <point x="0.942039" y="0.835813" />
+                            <point x="0.542971" y="0.973003" />
+                            <point x="0.481013" y="0.557025" />
+                            <point x="0.203198" y="0.505785" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="VarillaBarra" sid="159550792337515">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118652134478946" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Varilla de vidrio 1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="818368589299895">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="176813296977411" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="VarillaVidrioBarra" sid="421533451316759">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="365163403598191" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Varilla de vidrio 1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PapelFiltroBarra" sid="455782452413659">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="693618562005912" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Papel de filtro.png">
+                        <collision-poly>
+                            <point x="0.149254" y="0.149254" />
+                            <point x="0.501066" y="0.00426439" />
+                            <point x="0.852878" y="0.151386" />
+                            <point x="0.995736" y="0.498934" />
+                            <point x="0.855011" y="0.848614" />
+                            <point x="0.501066" y="0.995736" />
+                            <point x="0.149254" y="0.848614" />
+                            <point x="0.00426439" y="0.498934" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SoporteUniversalBarra" sid="825353922209881">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="558375704990207" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Soporte Universal 1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SoporteFiltroConicoBarra" sid="541619854348907">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="366998846280232" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\soporte para filtro cónico 1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EmbudoVidrioBarra" sid="152212398407550">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="502516696917568" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Embudo de vidrio 2.png">
+                        <collision-poly>
+                            <point x="0.427386" y="0.613995" />
+                            <point x="0.153527" y="0.0112867" />
+                            <point x="0.954357" y="0.0293454" />
+                            <point x="0.522822" y="0.501129" />
+                            <point x="0.518672" y="0.735892" />
+                            <point x="0.153527" y="0.173815" />
+                            <point x="0.390042" y="0.408578" />
+                            <point x="0.431535" y="0.501129" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MecheroBarra" sid="724756196832642">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="327002530263111" speed="5">
+                    <frame duration="1" hotspotX="0.513514" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Mechero bunsen.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TripodeBarra" sid="906285419288978">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="645827266885946" speed="5">
+                    <frame duration="1" hotspotX="0.510638" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Trípode de hierro.png">
+                        <collision-poly>
+                            <point x="0.131343" y="0.20362" />
+                            <point x="0.483582" y="0.00452489" />
+                            <point x="0.829851" y="0.208145" />
+                            <point x="0.967164" y="0.837104" />
+                            <point x="0.483582" y="0.651584" />
+                            <point x="0.0358209" y="0.809955" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TelaBarra" sid="901486931856878">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="951173900898656" speed="5">
+                    <frame duration="1" hotspotX="0.509434" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Tela de amianto 2.png">
+                        <collision-poly>
+                            <point x="0.0340557" y="0.2589" />
+                            <point x="0.501548" y="0.0226537" />
+                            <point x="0.98452" y="0.242718" />
+                            <point x="0.987616" y="0.76699" />
+                            <point x="0.501548" y="0.983819" />
+                            <point x="0.0154799" y="0.76699" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TuboBarra" sid="637968045041298">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662096020553710" speed="5">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Tubo de ensayo.png">
+                        <collision-poly>
+                            <point x="0.105882" y="0.432323" />
+                            <point x="0.505882" y="0.00606061" />
+                            <point x="0.917647" y="0.430303" />
+                            <point x="0.917647" y="0.571717" />
+                            <point x="0.505882" y="0.993939" />
+                            <point x="0.117647" y="0.567677" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ErlenmeyerBacl2Barra" sid="236097822378818">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228500927124432" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\tomya\Downloads\20250729_174415-removebg-preview.png">
+                        <collision-poly>
+                            <point x="0.270394" y="0.123501" />
+                            <point x="0.483813" y="0.0121951" />
+                            <point x="0.690234" y="0.128374" />
+                            <point x="0.837177" y="0.459704" />
+                            <point x="0.952633" y="0.912844" />
+                            <point x="0.483813" y="0.987556" />
+                            <point x="0.0238095" y="0.91122" />
+                            <point x="0.147942" y="0.459704" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ErlenmeyerK2C2O4Barra" sid="790227090454436">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="557081831109619" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\tomya\Downloads\20250729_174403-removebg-preview.png">
+                        <collision-poly>
+                            <point x="0.248275" y="0.107206" />
+                            <point x="0.447565" y="0" />
+                            <point x="0.713284" y="0.07467" />
+                            <point x="0.853136" y="0.474146" />
+                            <point x="0.902084" y="0.97123" />
+                            <point x="0.447565" y="1" />
+                            <point x="0.0210157" y="0.958577" />
+                            <point x="0.10143" y="0.474146" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PisetaAguaBarra" sid="338943380345962">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="589739112066676" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Piseta.png">
+                        <collision-poly>
+                            <point x="0.0965732" y="0.0472028" />
+                            <point x="0.523364" y="0.00699301" />
+                            <point x="0.722741" y="0.176573" />
+                            <point x="0.987539" y="0.512238" />
+                            <point x="0.943925" y="0.973776" />
+                            <point x="0.523364" y="0.991259" />
+                            <point x="0.376947" y="0.821678" />
+                            <point x="0.383178" y="0.512238" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="827392183536096">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="721716851391001" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DesecadorBarra" sid="317914362558808">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="284106872390034" speed="5">
+                    <frame duration="1" hotspotX="0.507937" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Desecador de Silicagel laboratorio.png">
+                        <collision-poly>
+                            <point x="0.231013" y="0.214689" />
+                            <point x="0.522152" y="0.00564972" />
+                            <point x="0.797468" y="0.228814" />
+                            <point x="0.89557" y="0.474576" />
+                            <point x="0.841772" y="0.759887" />
+                            <point x="0.522152" y="0.99435" />
+                            <point x="0.18038" y="0.779661" />
+                            <point x="0.0917722" y="0.474576" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EstufaBarra" sid="724467874468875">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="527365914716522" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-06\SIMULACION TP 4 - PPCION Y FILTRACION\Imagenes reales\Estufa de secado 1.png">
+                        <collision-poly>
+                            <point x="0.464029" y="0.016529" />
+                            <point x="0.482014" y="0.016529" />
+                            <point x="0.967626" y="0.628099" />
+                            <point x="0.251799" y="0.975207" />
+                            <point x="0.690647" y="0.979339" />
+                            <point x="0.028777" y="0.628099" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SimulacionPrecipitacionYFlitracion23525_page" sid="180510709403100">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="486229431511625" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tomya\Downloads\ilovepdf_pages-to-jpg(2)\Simulacion Precipitacion y Flitracion 23-5-25_page-0002.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fondoIndicee" sid="198406641291438">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="814391001670102" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pasoProcedimiento" sid="758563383068160">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="vasoDibujo" sid="177937139433078">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="663686054650225">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="939448990578934" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Vaso P 250 dibujo son fondo 64x64.png">
+                        <image-point name="Imagepoint 1" x="0.703125" y="0.878378" />
+                        <image-point name="Imagepoint 2" x="0.703125" y="-0.351351" />
+                        <image-point name="Imagepoint 3" x="0.296875" y="0.905405" />
+                        <image-point name="Imagepoint 4" x="0.015625" y="0.0405405" />
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="ConOxfalato" pingpong="0" repeatcount="1" repeatto="0" sid="259310340887213" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Vaso P 250 + slc oxalato + agua Dibujo sin fondo 64x64.png">
+                        <image-point name="Imagepoint 1" x="0.703125" y="0.878378" />
+                        <image-point name="Imagepoint 2" x="0.6875" y="-0.256757" />
+                        <image-point name="Imagepoint 3" x="0.3125" y="0.918919" />
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="ConPrecipitado" pingpong="0" repeatcount="1" repeatto="0" sid="914190731436217" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Vaso P 250  + precipitado Dibujo sin fondo 64x64.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="propipetaDibujo" sid="706701882552447">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="200714767652112">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="355393978399973" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-14\Dibujos sin fondo 64x64\Propipeta 1 Dibujo sin fondo 26x64.png">
+                        <image-point name="extremoInferior" x="0.47619" y="0.95" />
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="Apretada" pingpong="0" repeatcount="1" repeatto="0" sid="641093800599891" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\Animación punto 2\0.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.95" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\Animación punto 2\1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\Animación punto 2\2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\Animación punto 2\3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\Animación punto 2\4.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="volpipetaDibujo" sid="773997837679400">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="448071708036152">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="715649280583860" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\Volpipeta Dibujo sin fondo 12x64.png">
+                        <image-point name="extremoSuperior" x="0.5" y="0.0346821" />
+                        <collision-poly>
+                            <point x="0.223881" y="0.0155602" />
+                            <point x="0.492537" y="0.00726141" />
+                            <point x="0.746269" y="0.0176349" />
+                            <point x="0.880597" y="0.5" />
+                            <point x="0.597015" y="0.971992" />
+                            <point x="0.492537" y="0.988589" />
+                            <point x="0.358209" y="0.975104" />
+                            <point x="0.0895522" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="PropipetaPipeta" pingpong="0" repeatcount="1" repeatto="0" sid="201194996180249" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\Volpipeta Dibujo sin fondo 12x64.png">
+                        <image-point name="extremoSuperior" x="0.5" y="0.0693642" />
+                        <image-point name="extremoInferior" x="0.5" y="0.988439" />
+                        <collision-poly>
+                            <point x="0.131373" y="0.0145406" />
+                            <point x="1" y="0.0218109" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0.788235" y="1" />
+                            <point x="0.788235" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="199744827450458">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="951434803396318" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="454703579221344">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894101252711383" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="erlenmeyerOxalatoDibujo" sid="356333293893769">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="247417712965571">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="117569181748973" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-09\Dibujos sin fondo 64x64\Oxalato de potasio dibujo sin fondo 64x64.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.857143" />
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="PostPipeta" pingpong="0" repeatcount="1" repeatto="0" sid="840426088726056" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Video" sid="415318804068780">
+            <plugin id="video" />
+            <instance-variables>
+                <instance-variable name="videosReproducidos" sid="409208262630211" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="playButton" sid="989850465097233">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="667527192140435" speed="5">
+                    <frame duration="1" hotspotX="0.450617" hotspotY="0.570681" original-source="C:\PID\playbuttoncasero.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.433086" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.563404" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.563404" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tirar" sid="818004594993620">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="521354444944264" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tomya\Downloads\tirar.png">
+                        <collision-poly>
+                            <point x="0.145263" y="0.14557" />
+                            <point x="0.498947" y="0" />
+                            <point x="0.854737" y="0.14557" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854737" y="0.85443" />
+                            <point x="0.498947" y="1" />
+                            <point x="0.145263" y="0.85443" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pisetaDibujo" sid="448933809590117">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="197327706722264">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="180813373851241" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504854" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-09\Dibujos sin fondo 64x64\Piseta 1 dibujo sin fondo 64x64.png">
+                        <image-point name="pico" x="0.046875" y="0.174757" />
+                    </frame>
+                </animation>
+                <animation framecount="23" loop="0" name="Virtiendo" pingpong="0" repeatcount="1" repeatto="0" sid="246859502169819" speed="7">
+                    <frame duration="1" hotspotX="0.508197" hotspotY="0.5" original-source="C:\testborrar\Escaladas\1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505376" original-source="C:\testborrar\Escaladas\2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\testborrar\Escaladas\3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\testborrar\Escaladas\4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\testborrar\Escaladas\5.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\testborrar\Escaladas\6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="C:\testborrar\Escaladas\7.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\testborrar\Escaladas\8.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\testborrar\Escaladas\9.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\testborrar\Escaladas\10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\testborrar\Escaladas\11.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\testborrar\Escaladas\12.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\testborrar\Escaladas\13.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\testborrar\Escaladas\14.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\testborrar\Escaladas\15.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\testborrar\Escaladas\16.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="C:\testborrar\Escaladas\17.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\testborrar\Escaladas\18.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\testborrar\Escaladas\19.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\testborrar\Escaladas\20.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\testborrar\Escaladas\21.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505376" original-source="C:\testborrar\Escaladas\22.png" />
+                    <frame duration="1" hotspotX="0.508197" hotspotY="0.5" original-source="C:\testborrar\Escaladas\23.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tripodeDibujo" sid="300647963077423">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="409824318473428">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643642668289420" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Trípode dibujo sin fondo 64x64.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0338983" />
+                            <point x="0.96875" y="0.0338983" />
+                            <point x="0.875" y="0.491525" />
+                            <point x="0.9375" y="0.932203" />
+                            <point x="0.5" y="0.0508475" />
+                            <point x="0.078125" y="0.915254" />
+                            <point x="0.140625" y="0.491525" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="ConTela" pingpong="0" repeatcount="1" repeatto="0" sid="127300986432851" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Trípode + Tela de amianto Dibujo sin fondo 64x64.png">
+                        <image-point name="Imagepoint 1" x="0.515625" y="0.0701754" />
+                        <collision-poly>
+                            <point x="0.015625" y="0.0175439" />
+                            <point x="0.96875" y="0.0350877" />
+                            <point x="0.84375" y="0.491228" />
+                            <point x="0.890625" y="0.877193" />
+                            <point x="0.5" y="0.0877193" />
+                            <point x="0.09375" y="0.894737" />
+                            <point x="0.15625" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="telaDibujo" sid="673488146032635">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="893797781143841">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="127991041981255" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508475" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Tela de amianto Dibujo sin fondo 64x64.png">
+                        <collision-poly>
+                            <point x="0.015625" y="0.0169492" />
+                            <point x="0.984375" y="0.0169492" />
+                            <point x="0.984375" y="0.983051" />
+                            <point x="0.015625" y="0.983051" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MecheroDibujo" sid="309375009558094">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="encendido" sid="104164672136329" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="319571512954341">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="488573802172965" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Mechero Dibujo sin fondo 64x64.png">
+                        <collision-poly>
+                            <point x="0.40625" y="0.366197" />
+                            <point x="0.5" y="0.0140845" />
+                            <point x="0.578125" y="0.380282" />
+                            <point x="0.578125" y="0.492958" />
+                            <point x="0.96875" y="0.971831" />
+                            <point x="0.03125" y="0.971831" />
+                            <point x="0.125" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Prendido" pingpong="0" repeatcount="1" repeatto="0" sid="592027701801406" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Mechero encendido Dibujo sin fondo 64x64.png">
+                        <collision-poly>
+                            <point x="0.375" y="0.292683" />
+                            <point x="0.5" y="0.097561" />
+                            <point x="0.640625" y="0.280488" />
+                            <point x="0.59375" y="0.5" />
+                            <point x="0.984375" y="0.987805" />
+                            <point x="0.015625" y="0.987805" />
+                            <point x="0.421875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="varillaDibujo" sid="377812876394605">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="attached" sid="186243417319365" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="771653728025099">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709183485847478" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\Vigilante Dibujo sin fondo 12x64.png">
+                        <collision-poly>
+                            <point x="0.0392157" y="0.004329" />
+                            <point x="0.941176" y="0.00649351" />
+                            <point x="0.764706" y="0.5" />
+                            <point x="0.764706" y="0.974026" />
+                            <point x="0.490196" y="0.995671" />
+                            <point x="0.235294" y="0.974026" />
+                            <point x="0.235294" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="VarillaVaso" pingpong="0" repeatcount="1" repeatto="0" sid="984498274603697" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pipetaDibujo" sid="682711717132493">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="375832664085492">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="816089850092199" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\Pipeta modificada dibujo sin fondo 12x64.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.0115607" />
+                        <collision-poly>
+                            <point x="0.193548" y="0.013544" />
+                            <point x="0.483871" y="0.00677201" />
+                            <point x="0.741935" y="0.0180587" />
+                            <point x="0.741935" y="0.498871" />
+                            <point x="0.612903" y="0.972912" />
+                            <point x="0.483871" y="0.993228" />
+                            <point x="0.354839" y="0.975169" />
+                            <point x="0.193548" y="0.498871" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="ConPropipeta" pingpong="0" repeatcount="1" repeatto="0" sid="505268245112856" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\Pipeta modificada dibujo sin fondo 12x64.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.0289017" />
+                        <collision-poly>
+                            <point x="0.193548" y="0.013544" />
+                            <point x="0.483871" y="0.00677201" />
+                            <point x="0.741935" y="0.0180587" />
+                            <point x="0.741935" y="0.498871" />
+                            <point x="0.612903" y="0.972912" />
+                            <point x="0.483871" y="0.993228" />
+                            <point x="0.354839" y="0.975169" />
+                            <point x="0.193548" y="0.498871" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="erlenmeyerCloruro" sid="739331598546827">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="418682646210816">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="488094735512881" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\OneDrive_2025-08-09\Dibujos sin fondo 64x64\BaCl2 Dibujo sin fondo 64x64.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="textoBalanza" sid="503426778215693">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="EnciendeBalanza" sid="469380631390923">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="101693884007770" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TaraBalanza" sid="261538472520636">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="967660589241434" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PapelFiltroDibujo" sid="700485329670240">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="attached" sid="700376438569508" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="432774797630353">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155695838639125" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Papel de filtro 1 Dibujo sin fondo 64x64.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Doblado" pingpong="0" repeatcount="1" repeatto="0" sid="192021842171822" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.421875" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Papel de filtro 2 dibujo sin fondo 64x64.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Triangulo" pingpong="0" repeatcount="1" repeatto="0" sid="773405683442592" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.428571" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Papel de filtro Dibujo sin fondo 64x64.png">
+                        <image-point name="Imagepoint 1" x="0.5625" y="0.0612245" />
+                        <collision-poly>
+                            <point x="0.015625" y="0.0181818" />
+                            <point x="0.984375" y="0.0181818" />
+                            <point x="0.671875" y="0.618182" />
+                            <point x="0.5" y="0.909091" />
+                            <point x="0.796875" y="0.0727273" />
+                            <point x="0.25" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="TrianguloPrecipitado" pingpong="0" repeatcount="1" repeatto="0" sid="734760656461468" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.436364" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Papel de filtro + precipitado Dibujo sin fondo 64x64.png">
+                        <collision-poly>
+                            <point x="0.015625" y="0.0181818" />
+                            <point x="0.984375" y="0.0181818" />
+                            <point x="0.671875" y="0.618182" />
+                            <point x="0.5" y="0.909091" />
+                            <point x="0.796875" y="0.0727273" />
+                            <point x="0.25" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="DobladoPrecipitado" pingpong="0" repeatcount="1" repeatto="0" sid="777941336169687" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.433333" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Papel de filtro 1 + precipitado dibujo sin fondo 64x64.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SoporteUniversalDibujo" sid="576913526629673">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="250308577872179">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="961561291877146" speed="5">
+                    <frame duration="1" hotspotX="0.505263" hotspotY="1" original-source="C:\Simuladores\Separacion de fases\Imagenes\Dibujos\Sin fondo tomas\Soporte_Universal_+_soporte_embudo-removebg-preview.png">
+                        <image-point name="Imagepoint 1" x="0.2" y="0.35" />
+                        <image-point name="Imagepoint 2" x="0.631579" y="0.925" />
+                        <image-point name="Imagepoint 3" x="1.02105" y="0.93" />
+                        <collision-poly>
+                            <point x="0.157895" y="0" />
+                            <point x="0.357895" y="0" />
+                            <point x="0.936842" y="0.97" />
+                            <point x="0.0421053" y="0.97" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SoporteEmbudo" sid="200774526252606">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="attached" sid="213701258866512" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="809775501935851">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="975157575691961" speed="5">
+                    <frame duration="1" hotspotX="0.288889" hotspotY="0.47619" original-source="C:\Simuladores\Separacion de fases\Imagenes\Dibujos\Sin fondo tomas\Soporte embudo.png">
+                        <image-point name="Imagepoint 1" x="0.777778" y="0.428571" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="embudoDibujo" sid="994925486351406">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="attached" sid="457361728156824" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="164596323106445">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="913782383874992" speed="5">
+                    <frame duration="1" hotspotX="0.578125" hotspotY="0.371429" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Embudo dibujo sin fondo 64x64.png">
+                        <image-point name="Imagepoint 1" x="0.515625" y="0.180952" />
+                        <image-point name="Imagepoint 2" x="0.296875" y="0.152381" />
+                        <image-point name="Imagepoint 3" x="0.921875" y="-0.0285714" />
+                        <collision-poly>
+                            <point x="0.046875" y="0.0285714" />
+                            <point x="0.953125" y="0.0285714" />
+                            <point x="0.46875" y="0.495238" />
+                            <point x="0.46875" y="0.67619" />
+                            <point x="0.5" y="0.980952" />
+                            <point x="0.453125" y="0.72381" />
+                            <point x="0.453125" y="0.495238" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ErnlenmeyerDibujo" sid="761685090789357">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="attached" sid="125080824330766" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="633702073127602">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="588648992751991" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Simuladores\Separacion de fases\Imagenes\Dibujos\Sin fondo tomas\Erlenmeyer con solucion.png">
+                        <collision-poly>
+                            <point x="0.328571" y="0.247312" />
+                            <point x="0.5" y="0" />
+                            <point x="0.657143" y="0.258065" />
+                            <point x="0.985714" y="0.989247" />
+                            <point x="0.0142857" y="0.989247" />
+                            <point x="0.2" y="0.494624" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Solucion" pingpong="0" repeatcount="1" repeatto="0" sid="209106422075973" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Simuladores\Separacion de fases\Imagenes\Dibujos\Vaso + solucion final.jpg">
+                        <collision-poly>
+                            <point x="0.327273" y="0.25" />
+                            <point x="0.490909" y="0.0277778" />
+                            <point x="0.654545" y="0.263889" />
+                            <point x="0.763636" y="0.5" />
+                            <point x="0.945455" y="0.958333" />
+                            <point x="0.0363636" y="0.972222" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="SolucionFinal" pingpong="0" repeatcount="1" repeatto="0" sid="693223458960657" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.607143" y="0.0277778" />
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Volcado" pingpong="0" repeatcount="1" repeatto="0" sid="380608892680227" speed="3">
+                    <frame duration="1" hotspotX="0.509434" hotspotY="1" original-source="C:\Simuladores\Separacion de fases\Imagenes\Dibujos nuevos\Dibujos instrumentos\Ernlenmeyer\Erlenmeyer+_100_ml_solucion_2-removebg-preview.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Simuladores\Separacion de fases\Imagenes\Dibujos nuevos\Dibujos instrumentos\Ernlenmeyer\Erlenmeyer+_100_ml_solucion_3-removebg-preview.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Simuladores\Separacion de fases\Imagenes\Dibujos nuevos\Dibujos instrumentos\Ernlenmeyer\Erlenmeyer+_100_ml_solucion_4-removebg-preview.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tuboEnsayo" sid="641518822574165">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="attached" sid="774298581451226" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="616951032444950">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="950310177274550" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Tubo de ensayo Dibujo sin fondo 64x64.png">
+                        <collision-poly>
+                            <point x="0.015625" y="0.0026738" />
+                            <point x="0.953125" y="0.00802139" />
+                            <point x="0.953125" y="0.5" />
+                            <point x="0.828125" y="0.970588" />
+                            <point x="0.5" y="0.997326" />
+                            <point x="0.171875" y="0.970588" />
+                            <point x="0.046875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tuboEnsayo2" sid="460320162744695">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="attached" sid="411594427193198" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="582998263527302">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="143680315549566" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\tomya\Downloads\dibujossinfondo\Dibujos sin fondo 64x64\Tubo de ensayo Dibujo sin fondo 64x64.png">
+                        <collision-poly>
+                            <point x="0.015625" y="0.0026738" />
+                            <point x="0.953125" y="0.00802139" />
+                            <point x="0.953125" y="0.5" />
+                            <point x="0.828125" y="0.970588" />
+                            <point x="0.5" y="0.997326" />
+                            <point x="0.171875" y="0.970588" />
+                            <point x="0.046875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EstufaDibujo" sid="940439997839318">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="926326625775277">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="930886757957314" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503311" original-source="C:\Simuladores\Separacion de fases\Imagenes\Dibujos\Sin fondo\Estufa.png">
+                        <collision-poly>
+                            <point x="0.02" y="0.0265487" />
+                            <point x="0.98" y="0.0265487" />
+                            <point x="0.98" y="0.973451" />
+                            <point x="0.5" y="0.955752" />
+                            <point x="0.02" y="0.973451" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Prendida" pingpong="0" repeatcount="1" repeatto="0" sid="616599355942424" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503311" original-source="C:\Simuladores\Separacion de fases\Imagenes\Dibujos\Sin fondo\Estufa prendida.png">
+                        <collision-poly>
+                            <point x="0.02" y="0.0265487" />
+                            <point x="0.98" y="0.0265487" />
+                            <point x="0.98" y="0.973451" />
+                            <point x="0.5" y="0.955752" />
+                            <point x="0.02" y="0.973451" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EncenderEstufa" sid="495715062152780">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="583959803067332" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ApagarEstufa" sid="280772944405835">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="354329418873746" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Desecador" sid="478960252697992">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="931238736103891">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="652373548801996" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" original-source="C:\Simuladores\Separacion de fases\Imagenes\Dibujos\Sin fondo\Desecador.png">
+                        <collision-poly>
+                            <point x="0.133333" y="0.151899" />
+                            <point x="0.5" y="0.0126582" />
+                            <point x="0.855556" y="0.164557" />
+                            <point x="0.955556" y="0.493671" />
+                            <point x="0.877778" y="0.860759" />
+                            <point x="0.5" y="0.974684" />
+                            <point x="0.122222" y="0.860759" />
+                            <point x="0.0444444" y="0.493671" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="ConCrisol" pingpong="0" repeatcount="1" repeatto="0" sid="226049852762666" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" original-source="C:\Simuladores\Separacion de fases\Imagenes\DibujosOriginales\Dibujos instrumentos\Dibujos sin fondo faltantes (para Tomás)\Desecador con crisol 1.png">
+                        <collision-poly>
+                            <point x="0.139588" y="0.159686" />
+                            <point x="0.498856" y="0.0078534" />
+                            <point x="0.860412" y="0.159686" />
+                            <point x="0.951945" y="0.5" />
+                            <point x="0.87643" y="0.858639" />
+                            <point x="0.498856" y="0.973822" />
+                            <point x="0.12357" y="0.858639" />
+                            <point x="0.0503432" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="ConCrisolCapsula" pingpong="0" repeatcount="1" repeatto="0" sid="882610496837328" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" original-source="C:\Simuladores\Separacion de fases\Imagenes\Dibujos nuevos\Dibujos instrumentos\Desecador_+_Crisol_+_Capsula-removebg-preview.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="ConCapsula" pingpong="0" repeatcount="1" repeatto="0" sid="254826132180604" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" original-source="C:\Users\flech\Desktop\UTN\PID_simulaciones\simulador-separacion-de-fases-pid-qg\Simulador\Animations\Desecador\ConCrisolCapsula\000.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="imagenPaso15" sid="473670113127701">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="185200884209570" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tomya\Downloads\imagencruz.jpg">
+                        <image-point name="Imagepoint 1" x="0.992188" y="0.0078125" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Cruz" sid="562888112289580">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="977402910153396" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="imagenPaso31" sid="446080645037217">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="fueActivada" sid="170553635974744" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="217523001675928" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503484" original-source="C:\Users\tomya\Downloads\Punto 32.jpg">
+                        <image-point name="Imagepoint 1" x="1" y="0" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="imagenPaso43" sid="207150346523277">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="150892634920125" speed="5">
+                    <frame duration="1" hotspotX="0.503125" hotspotY="0.502326" original-source="C:\Users\tomya\Downloads\images.jpg">
+                        <image-point name="Imagepoint 1" x="1" y="0" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="imagenPaso47" sid="424750647486454">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="698403756309817" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505495">
+                        <image-point name="Imagepoint 1" x="1" y="0" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="introduccionTp" sid="567958714746337">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118417054998475" speed="5">
+                    <frame duration="1" hotspotX="0.500387" hotspotY="0.5563" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CalculosTp" sid="528830438672221">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="142910911782151" speed="5">
+                    <frame duration="1" hotspotX="0.496368" hotspotY="0.617336" original-source="C:\Users\flech\Desktop\UTN\PID_simulaciones\simulador-separacion-de-fases-pid-qg\Simulador\Animations\CalculosTp\Default\0000.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="imagenPaso38" sid="719932156227251">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="fueActivada" sid="759153255862899" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="655106096725282" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501044" original-source="C:\Users\tomya\Downloads\Punto 39.jpg">
+                        <image-point name="Imagepoint 1" x="1" y="0" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Inicio.xml</layout>
+        <layout>Indice.xml</layout>
+        <layout>Simulador.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
+        <event-sheet>Event sheet 3.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="20" />
+        <global-instance type="Mouse" uid="11" />
+        <global-instance type="Function" uid="13" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="punto39.mp4" />
+        <file name="punto35.mp4" />
+        <file name="punto32.mp4" />
+        <file name="punto24.mp4" />
+        <file name="punto17.mp4" />
+        <file name="punto5.mp4" />
+        <file name="punto4.mp4" />
+    </files-folder>
+</c2project>

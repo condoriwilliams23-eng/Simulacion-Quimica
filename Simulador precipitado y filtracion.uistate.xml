@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Simulador</layout>
+        <layout order="2">Inicio</layout>
+        <event-sheet active="1" order="1">Event sheet 3</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/imagenInicio/" />
+        <folder expanded="1" path="animation-folder/imagenIndice/" />
+        <folder expanded="1" path="animation-folder/fondoGrisHUD/" />
+        <folder expanded="1" path="animation-folder/fondoCompuestos/" />
+        <folder expanded="1" path="animation-folder/miniBarra/" />
+        <folder expanded="1" path="animation-folder/lineaHorizontal/" />
+        <folder expanded="1" path="animation-folder/fondoMateriales/" />
+        <folder expanded="1" path="animation-folder/menu/" />
+        <folder expanded="1" path="animation-folder/lineaMateriales/" />
+        <folder expanded="1" path="animation-folder/antiBarraMateriales/" />
+        <folder expanded="1" path="animation-folder/antiBarraCompuestos/" />
+        <folder expanded="1" path="animation-folder/barraCompuestos/" />
+        <folder expanded="1" path="animation-folder/lineaHUD/" />
+        <folder expanded="1" path="animation-folder/fondoSimulador/" />
+        <folder expanded="1" path="animation-folder/grid/" />
+        <folder expanded="1" path="animation-folder/balanzaSimulacion/" />
+        <folder expanded="1" path="animation-folder/cuadroDialogo/" />
+        <folder expanded="1" path="animation-folder/barraMenu/" />
+        <folder expanded="1" path="animation-folder/cerrar/" />
+        <folder expanded="1" path="animation-folder/paredTextos/" />
+        <folder expanded="1" path="animation-folder/volver/" />
+        <folder expanded="1" path="animation-folder/volverFalso/" />
+        <folder expanded="1" path="animation-folder/paredFalsa/" />
+        <folder expanded="1" path="animation-folder/lavar/" />
+        <folder expanded="1" path="animation-folder/fondoTabla/" />
+        <folder expanded="1" path="animation-folder/guardar/" />
+        <folder expanded="1" path="animation-folder/lineaMateriales2/" />
+        <folder expanded="1" path="animation-folder/lineaMaterialesDesaparece/" />
+        <folder expanded="1" path="animation-folder/acercaDe/" />
+        <folder expanded="1" path="animation-folder/Balanza/" />
+        <folder expanded="1" path="animation-folder/fondoCompuestos2/" />
+        <folder expanded="1" path="animation-folder/fondoTercero/" />
+        <folder expanded="1" path="animation-folder/fondoEquipos/" />
+        <folder expanded="1" path="animation-folder/BarraEquipamiento/" />
+        <folder expanded="1" path="animation-folder/antiBarraEquipos/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/vaso250Barra/" />
+        <folder expanded="1" path="animation-folder/ErlenmeyerBarra/" />
+        <folder expanded="1" path="animation-folder/VolpipetaBarra/" />
+        <folder expanded="1" path="animation-folder/PipetaBarra/" />
+        <folder expanded="1" path="animation-folder/PropipetaBarra/" />
+        <folder expanded="1" path="animation-folder/VarillaBarra/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/VarillaVidrioBarra/" />
+        <folder expanded="1" path="animation-folder/PapelFiltroBarra/" />
+        <folder expanded="1" path="animation-folder/SoporteUniversalBarra/" />
+        <folder expanded="1" path="animation-folder/SoporteFiltroConicoBarra/" />
+        <folder expanded="1" path="animation-folder/EmbudoVidrioBarra/" />
+        <folder expanded="1" path="animation-folder/MecheroBarra/" />
+        <folder expanded="1" path="animation-folder/TripodeBarra/" />
+        <folder expanded="1" path="animation-folder/TelaBarra/" />
+        <folder expanded="1" path="animation-folder/TuboBarra/" />
+        <folder expanded="1" path="animation-folder/ErlenmeyerBacl2Barra/" />
+        <folder expanded="1" path="animation-folder/ErlenmeyerK2C2O4Barra/" />
+        <folder expanded="1" path="animation-folder/PisetaAguaBarra/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/DesecadorBarra/" />
+        <folder expanded="1" path="animation-folder/EstufaBarra/" />
+        <folder expanded="1" path="animation-folder/SimulacionPrecipitacionYFlitracion23525_page/" />
+        <folder expanded="1" path="animation-folder/fondoIndicee/" />
+        <folder expanded="1" path="animation-folder/vasoDibujo/" />
+        <folder expanded="1" path="animation-folder/propipetaDibujo/" />
+        <folder expanded="1" path="animation-folder/volpipetaDibujo/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/erlenmeyerOxalatoDibujo/" />
+        <folder expanded="1" path="animation-folder/playButton/" />
+        <folder expanded="1" path="animation-folder/tirar/" />
+        <folder expanded="1" path="animation-folder/pisetaDibujo/" />
+        <folder expanded="1" path="animation-folder/tripodeDibujo/" />
+        <folder expanded="1" path="animation-folder/telaDibujo/" />
+        <folder expanded="1" path="animation-folder/MecheroDibujo/" />
+        <folder expanded="1" path="animation-folder/varillaDibujo/" />
+        <folder expanded="1" path="animation-folder/pipetaDibujo/" />
+        <folder expanded="1" path="animation-folder/erlenmeyerCloruro/" />
+        <folder expanded="1" path="animation-folder/EnciendeBalanza/" />
+        <folder expanded="1" path="animation-folder/TaraBalanza/" />
+        <folder expanded="1" path="animation-folder/PapelFiltroDibujo/" />
+        <folder expanded="1" path="animation-folder/SoporteUniversalDibujo/" />
+        <folder expanded="1" path="animation-folder/SoporteEmbudo/" />
+        <folder expanded="1" path="animation-folder/embudoDibujo/" />
+        <folder expanded="1" path="animation-folder/ErnlenmeyerDibujo/" />
+        <folder expanded="1" path="animation-folder/tuboEnsayo/" />
+        <folder expanded="1" path="animation-folder/tuboEnsayo2/" />
+        <folder expanded="1" path="animation-folder/EstufaDibujo/" />
+        <folder expanded="1" path="animation-folder/EncenderEstufa/" />
+        <folder expanded="1" path="animation-folder/ApagarEstufa/" />
+        <folder expanded="1" path="animation-folder/Desecador/" />
+        <folder expanded="1" path="animation-folder/imagenPaso15/" />
+        <folder expanded="1" path="animation-folder/Cruz/" />
+        <folder expanded="1" path="animation-folder/imagenPaso31/" />
+        <folder expanded="1" path="animation-folder/imagenPaso43/" />
+        <folder expanded="1" path="animation-folder/imagenPaso47/" />
+        <folder expanded="1" path="animation-folder/introduccionTp/" />
+        <folder expanded="1" path="animation-folder/CalculosTp/" />
+        <folder expanded="1" path="animation-folder/imagenPaso38/" />
+    </folders-expanded>
+</c2uistate>

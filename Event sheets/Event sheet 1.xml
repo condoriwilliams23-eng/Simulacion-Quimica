@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="163785182024546">
+            <conditions>
+                <condition id="1" name="On any click" sid="641354658484706" type="Mouse" />
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="832061400326747" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
